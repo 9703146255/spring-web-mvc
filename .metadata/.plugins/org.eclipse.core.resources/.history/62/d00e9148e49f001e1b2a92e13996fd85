@@ -1,0 +1,77 @@
+package in.thiru.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import in.thiru.entity.Products;
+import in.thiru.service.ProductService;
+
+@Controller
+public class ProductController {
+
+	@Autowired
+	private ProductService pService;
+
+	@GetMapping("/products")
+	public ModelAndView getProducts() {
+		
+		System.out.println("getProducts() :: method");
+		
+		List<Products> allProducts = pService.getAllProducts();
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("products",allProducts );
+		
+		mav.setViewName("index");
+
+		return mav;
+
+	}
+	
+	@GetMapping("/addProductsPage")
+	public ModelAndView showProductAddPage()
+	{
+		ModelAndView mav=new ModelAndView();
+		mav.addObject("product",new Products());
+		
+		System.out.println("showProductAddPage() :: method");
+		mav.setViewName("addProductsPage");
+		
+		return mav;
+	}
+	
+	public ModelAndView saveProduct(Products products)
+	{
+		boolean saveProducts = pService.saveProducts(products);
+		ModelAndView mav=new ModelAndView();
+		
+		
+		
+		if(saveProducts)
+		{
+			mav.addObject("successMsg","Record Saved");
+		}
+		else
+		{
+			mav.addObject("errorMsg","Record not saved");
+		}
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

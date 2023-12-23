@@ -1,0 +1,18 @@
+package in.thiru.service;
+
+import java.util.List;
+
+import in.thiru.entity.Products;
+import in.thiru.repo.ProductRepository;
+
+public class ProductService implements IProductService {
+
+	private ProductRepository pRepo;
+
+	@Override
+	public List<Products> getAllBooks() {
+
+		return pRepo.findAll();
+	}
+
+}

@@ -1,0 +1,14 @@
+package in.thiru.entity;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Mobile {
+	
+	
+	private Integer mobileId;
+	private String mobileName;
+	private Double mobilePrice;
+	
+
+}

@@ -1,0 +1,33 @@
+package in.thiru;
+
+class Parent
+{
+	
+	void test()
+	{
+		
+	}
+	
+	
+}
+
+
+
+
+
+
+public  class Employee {
+	
+
+	public static void main(String[] args) 
+	{
+
+		
+		
+		
+		
+		
+		
+	}
+
+}

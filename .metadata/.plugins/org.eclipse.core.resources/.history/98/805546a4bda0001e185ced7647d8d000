@@ -1,0 +1,15 @@
+package in.thiru;
+
+
+
+public class Employee 
+
+
+	public static void main(String[] args) {
+		
+		Parent refVar=new Employee();
+		refVar.test();
+
+	}
+
+}

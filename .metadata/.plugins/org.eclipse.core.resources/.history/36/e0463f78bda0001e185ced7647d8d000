@@ -1,0 +1,21 @@
+package in.thiru;
+
+class Parent {
+
+	void test() {
+
+	}
+
+}
+
+public class Employee extends Parent{
+
+	void test() {
+
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

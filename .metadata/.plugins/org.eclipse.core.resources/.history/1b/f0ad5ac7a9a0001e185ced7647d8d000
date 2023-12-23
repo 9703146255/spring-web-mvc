@@ -1,0 +1,33 @@
+package in.thiru.service;
+
+import java.awt.print.Book;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import in.thiru.entity.Mobile;
+import in.thiru.repo.MobileRepository;
+
+@Service
+public class MobileServicex implements IMobileService {
+
+	@Autowired
+	private MobileRepository mobileRepo;
+
+	@Override
+	public List<Mobile> getAllMobiles() {
+
+		return mobileRepo.findAll();
+	}
+
+	@Override
+	public boolean saveMobiles(Mobile mobile) {
+		
+		Mobile save = mobileRepo.save(mobile);
+		
+		
+		
+		return false;
+	}
+}

@@ -1,0 +1,31 @@
+NO OF WAYS TO REDIRECT THE PAGE
+===============================
+
+
+Using ModelAndView:
+------------------
+			ModelAndView mav = new ModelAndView("redirect:/products");
+			return mav;
+
+
+Using RedirectView:
+-------------------
+			RedirectView redirectView = new RedirectView("/products");
+			ModelAndView mav = new ModelAndView(redirectView);
+			return mav;
+
+
+Using RedirectAttributes (for Redirect with Flash Attributes):
+--------------------------------------------------------------
+			RedirectAttributes attributes = new RedirectAttributesModelMap();
+			attributes.addAttribute("attributeName", attributeValue);
+			return "redirect:/products";
+
+
+This is useful when you want to pass flash attributes to the redirected view.
+
+
+
+Using Redirect String (Without ModelAndView):
+-------------------------------------------
+return "redirect:/products";

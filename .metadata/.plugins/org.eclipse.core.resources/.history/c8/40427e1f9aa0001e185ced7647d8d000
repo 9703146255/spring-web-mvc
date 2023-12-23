@@ -1,0 +1,23 @@
+package in.thiru.entity;
+
+import jakarta.annotation.Generated;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Mobile {
+
+	
+	@Id
+	@Generated
+	private Integer mobileId;
+	private String mobileName;
+	private Double mobilePrice;
+
+}

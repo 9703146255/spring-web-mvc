@@ -1,0 +1,13 @@
+package in.thiru.controller;
+
+import org.springframework.stereotype.Controller;
+
+import in.thiru.service.BookService;
+
+@Controller
+public class BookController {
+	
+	
+	private BookService bookService;
+
+}

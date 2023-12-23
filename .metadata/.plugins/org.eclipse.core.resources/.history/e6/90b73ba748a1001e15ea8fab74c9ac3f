@@ -1,0 +1,32 @@
+package in.thiru.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class EmployeeController {
+
+	@GetMapping("/demo1")
+	public ModelAndView getMessage1() {
+		ModelAndView mav = new ModelAndView();
+
+		mav.addObject("msg", "WELCOME TO ASHOK IT...............");
+
+		mav.setViewName("index");
+
+		return mav;
+	}
+	
+	@GetMapping("/demo2")
+	public ModelAndView getMessage2() {
+		ModelAndView mav = new ModelAndView();
+
+		mav.addObject("msg", "WELCOME TO ASHOK IT...............");
+
+		mav.setViewName("index");
+
+		return mav;
+	}
+
+}

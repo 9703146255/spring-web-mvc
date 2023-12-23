@@ -1,0 +1,40 @@
+package in.thiru;
+
+public final class Employee 
+{
+	 private  Integer empId;
+	 private String empName;
+	 private Double empSal;
+	public Integer getEmpId() 
+	{
+		return empId;
+	}
+	public String getEmpName() 
+	{
+		return empName;
+	}
+	public Double getEmpSal() 
+	{
+		return empSal;
+	}
+	 
+	
+	
+	
+	public Employee(Integer empId, String empName, Double empSal) {
+		this.empId = empId;
+		this.empName = empName;
+		this.empSal = empSal;
+	}
+	public Employee() {
+		// TODO Auto-generated constructor stub
+	}
+	public static void main(String[] args)
+	{
+		
+	}
+	 
+	 
+	 
+
+}

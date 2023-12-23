@@ -1,0 +1,29 @@
+package in.thiru;
+
+import java.util.concurrent.Callable;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.ScheduledExecutorService;
+
+public class Demo implements Callable<String> {
+
+	@Override
+	public String call() throws Exception {
+
+		for (int i = 1; i <= 10; i++) 
+		{
+
+		}
+
+		return null;
+	}
+
+	public static void main(String[] args)
+	{
+		
+		
+             
+
+	}
+
+}

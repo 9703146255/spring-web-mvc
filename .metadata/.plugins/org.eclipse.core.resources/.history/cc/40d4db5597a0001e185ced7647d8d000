@@ -1,0 +1,21 @@
+package in.thiru.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import in.thiru.entity.Mobile;
+import in.thiru.repo.MobileRepository;
+
+@Service
+public class MobileServicex implements IMobileService {
+
+	private MobileRepository mobileRepo;
+
+	@Override
+	public List<Mobile> getAllMobiles() {
+
+		return mobileRepo.findAll();
+	}
+
+}
